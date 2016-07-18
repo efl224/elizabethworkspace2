@@ -16,17 +16,69 @@ var fibber = {};
 
 
 //this is a function that can be called using fibber.init();
+
+
+// fibber.start = function(){
+// 	alert("Start Button Clicked...");
+
+
 fibber.initialize = function(){
 
-	$("#startbtn").on("click", fibber.start);
+
+	//creating a property of the fibber object
+
+	fibber.currentQuestion = {
+
+	fibber.questionText = "Are we in New York";
+	fibber.questionContext = "-ect2200 class";
+	fibber.isTrue = true;
 
 };
 
-fibber.start = function(){
-	alert("Start Button Clicked...");
+
+	//setup all the true/false buttons to call processDecision
+
+	function.setupStatementScreen();
+
+	//call the viewQuestion function...
+
+	function.viewQuestion();
+
 };
 
+function.viewQuestion = function(){
 
+	var questionText = "Are we in New York?";
+	var questionContext = "-ect2200 class";
+	
+
+
+	$("#statement-text").text(questionText);
+	$("#statement-context").text(questionContext);
+};
+
+function.setupStatementScreen = function(){
+
+};
+	
+	$(".truth-btn").click(function(){
+
+		if(fibber.isTrue == true){
+			alert ("YOU ARE RIGHT IT IS TRUE!!!");
+
+		}
+		alert("Nice job! We are totally in New York!")
+	});
+
+	$(".fib-btn").click(function(){
+
+		alert("What?! We're totally in NY!")
+
+	});
+
+	// $("#startbtn").on("click", fibber.start);
+
+};
 
 
 
